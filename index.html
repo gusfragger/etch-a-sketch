@@ -4,37 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" />
     <title>Etch-a-Sketch</title>
   </head>
   <body>
-    <h1 class="title">ETCH A SKETCH</h1>
-    <div class="ui">
-      <div class="range-container">
-        <p class="slider-value">16 x 16</p>
-        <input type="range" min="1" max="64" value="16" class="grid-slider" />
-        <button class="size-button">APPLY</button>
-      </div>
-      <form class="mode-selection">
-        <input type="radio" name="selection" id="bw" value="bw" />Black & White
-        <br />
-        <input type="radio" name="selection" id="rgb" value="rgb" />RGB <br />
-        <input
-          type="radio"
+    <h1 class="title">etch-a-sketch</h1>
+    <div class="ui" >
+        <div class="selection-buttons" id="mode-selection">
+          <div class="bw mode-btn"><button type="button" id="bw" value="bw" class="inactive">Black & White</button></div>
+          <div class="shadows mode-btn"><button type="button" id="shadows" value="shadows" class="inactive">Shadows</button></div>
+          <div class="lights mode-btn"><button type="button" id="lights" value="lights" class="inactive">Lights</button></div>
+          <div class="rgb mode-btn"><button type="button" id="rgb" value="rgb" class="inactive">RGB</button></div>
+          <div class="custom mode-btn"><button type="button" id="pick-color" value="pick-color" class="inactive">Custom Color</button></div>
+          <input
+          type="color"
           name="selection"
-          id="shadows"
-          value="Shadows"
-        />Shadows
-        <br />
-        <input
-          type="radio"
-          name="selection"
-          id="lights"
-          value="lights"
-        />Lights<br />
-      </form>
+          id="color-picker"
+          value="#6BDBBA"
+          />
+        </div>
+        <div class="canvas">
+          <div class="container"></div>
+        </div>
     </div>
-    <div class="container"></div>
+    <div class="range-container">
+      <p class="slider-value">16 x 16</p>
+      <input type="range" min="1" max="64" value="16" class="grid-slider" />
+      <button class="size-button">apply / clean</button>
+    </div>
+    <footer class="signature">Created with ❤ by Gusfragger</footer>
     <script defer src="./app.js"></script>
   </body>
 </html>

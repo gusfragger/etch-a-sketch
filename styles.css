@@ -2,15 +2,69 @@
   --board-columns: 1;
   --board-rows: 1;
   --paint-color: #ffffffcc;
+  background-color: #e8d8b0 ;
+}
+*{
+  padding: 0;
+  margin: 5;
+}
+
+body{
+  height: 100vh;
+  
 }
 .title {
   text-align: center;
+  font-family: 'Righteous', cursive;
+  font-size: 3em;
+  color: #c77222;
+}
+
+.ui{
+  display:flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items:center;
+  justify-content: center;
+}
+.mode-btn{
+  display: flex;
+  justify-content: center;
+}
+.bw{
+  background-color: #55371c ;
+}
+.shadows{
+  background-color:#c77222;
+}
+.lights{
+  background-color: #e3b03b;
+}
+.rgb{
+  background-color: #7fcfc7;
+}
+.custom{
+  background-color: #6f336d;
+}
+
+.selection-buttons{
+  flex: 25%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.canvas{
+  display: flex;
+  flex:50%;
+  justify-content: center;
 }
 
 .container {
-  width: 40em;
-  height: 40em;
-  border: red 2px solid;
+  width: 35em;
+  height: 35em;
+  border: #c77222 2em solid;
+  border-radius: 5%;
   display: grid;
   grid-template-columns: repeat(var(--board-columns), 1fr);
   grid-template-rows: repeat(var(--board-rows));
@@ -18,15 +72,79 @@
 
 .cell {
   border: black 1px solid;
+  border-radius: 2%;
   background: var(--paint-color);
 }
 
-/*Responsive layout*/
-
-@media (max-width: 600px) {
-  .container {
-    width: 30em;
-    height: 30em;
-  }
+.active, .inactive:hover {
+  background-color: #6D58FF;
 }
 
+button {
+  --color: #fff;
+  --color-hover: var(--color);
+  --background: #2B3044;
+  padding: 8px 28px;
+  border-radius: 20px;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: none;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  color: var(--c, var(--color));
+  background: var(--b, var(--background));
+  transition: color 0.2s linear var(--c-d, 0.2s), background 0.3s linear var(--b-d, 0.2s);
+}
+
+.range-container{
+  display: flex;
+  justify-content: center;
+  padding-top: 1em;
+  
+}
+
+p{
+  font-family: 'Righteous', cursive;
+}
+
+#color-picker{
+  appearance: none;
+  width: 100px;
+  height: 100px;
+  border: none;
+  cursor: pointer;
+  background-color: #e8d8b0;
+}
+#color-picker::-webkit-color-swatch{
+  border-radius: 15px;
+  border: none;
+}
+#color-picker::-moz-color-swatch{
+  border-radius: 15px;
+  border: none;
+}
+.signature{
+  background-color: #c77222;
+  font-family: 'Righteous', cursive;
+  font-size: 25px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0.5em;
+}
+
+
+/*Responsive layout*/
+
+@media (min-width:556px) {
+  .ui {
+    flex-wrap: wrap;
+  }
+}
