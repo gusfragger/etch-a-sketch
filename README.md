@@ -25,7 +25,7 @@ I started this project from a moodboard to get an idea of what I wanted, opted f
 ## Live Preview 🔥
 You can try a live preview of this project at the following 
 
-<link src="https://gusfragger.github.io/etch-a-sketch/">
+[Live preview](https://gusfragger.github.io/etch-a-sketch/)
 
 ## Future Features 🔮
 *Allow users to download their drawings as pixel art or as icons.
