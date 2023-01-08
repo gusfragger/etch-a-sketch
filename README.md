@@ -1,7 +1,7 @@
 #Etch-a-Sketch 🎨
 Etch-a-Sketch is a simple drawing board that allows users to draw by moving their mouse over the cells on the board. The board can be resized using the range slider and the user can select the drawing mode using the buttons.
 
-![webapp picture](images\etch-a-sketch.png)
+![webapp picture](./images/etch-a-sketch.png)
 
 ##Features 🔥
 *Black and White mode: solid black color with an alpha channel value of FF (fully opaque).
@@ -20,7 +20,7 @@ Etch-a-Sketch is a simple drawing board that allows users to draw by moving thei
 ##Starting from a Mockup 🎨
 I started this project from a moodboard to get an idea of what I wanted, opted for this 70's inspired theme.
 
-![Mockup picture](images\moddboard.jpg)
+![Mockup picture](./images/moddboard.jpg)
 
 ##Live Preview 🔥
 You can try a live preview of this project at the following 
